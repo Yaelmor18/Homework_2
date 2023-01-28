@@ -58,6 +58,8 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Turrent_Script.cs" />
+    <Compile Include="Assets\Scripts\Serilize_Transform.cs" />
+    <Compile Include="Assets\Scripts\Presistence_Manager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

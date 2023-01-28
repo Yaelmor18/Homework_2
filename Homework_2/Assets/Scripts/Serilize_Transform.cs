@@ -7,7 +7,7 @@ using UnityEngine;
 public class Serilize_Transform
 {
     public float positionX,positionY, positionZ;
-    public float rotaisonX, rotaisonY, rotaisonZ;
+    public float rotaisonX, rotaisonY, rotaisonZ, rotaisonW;
     public float scaleX, scaleY, scaleZ;
 
 
@@ -22,6 +22,7 @@ public class Serilize_Transform
             rotaisonX = fromTransform.rotation.x,
             rotaisonY = fromTransform.rotation.y,
             rotaisonZ = fromTransform.rotation.z,
+            rotaisonW = fromTransform.rotation.w,
 
             scaleX = fromTransform.localScale.x,
             scaleY = fromTransform.localScale.y,

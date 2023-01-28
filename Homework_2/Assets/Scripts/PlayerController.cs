@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
     {
         moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
         rotationDirection = new Vector3(0, Input.GetAxis("Mouse X"), 0);
-        mainCamera.transform.Rotate(Input.GetAxis("Mouse Y") * -playerRotateSpeed * Time.deltaTime, 0, 0);
+        mainCamera.transform.eulerAngles += new Vector3(Mathf.Clamp(Input.GetAxis("Mouse Y") * -playerRotateSpeed * Time.deltaTime, -90f, 90f), 0, 0);
     }
     
     private void FixedUpdate()

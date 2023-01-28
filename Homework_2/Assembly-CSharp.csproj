@@ -61,6 +61,7 @@
     <Compile Include="Assets\Scripts\Serilize_Transform.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\PresictenceManager.cs" />
+    <Compile Include="Assets\Scripts\Raycast.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

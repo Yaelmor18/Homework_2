@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Rigidbody playerRigidbody;
     [SerializeField] float playerMoveSpeed;
     [SerializeField] float playerRotateSpeed;
+    [SerializeField] Animator animator;
+
 
     [SerializeField] Camera mainCamera;
 
@@ -31,6 +33,11 @@ public class PlayerController : MonoBehaviour
     { 
         // Movement handling
         playerRigidbody.MovePosition(playerRigidbody.position + playerMoveSpeed * Time.deltaTime * transform.TransformDirection(moveDirection));
+        if(moveDirection != Vector3.zero)
+        animator.SetBool("IsWallking", true);
+        else
+        animator.SetBool("IsWallking", false);
+
     }
 
     private void Rotation()

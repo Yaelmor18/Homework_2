@@ -8,7 +8,7 @@ public class Raycast : MonoBehaviour
     [SerializeField] Camera mainCamera;
     [SerializeField] LayerMask raycastLayerMask;
 
-    Vector2 mousePosition;
+    //Vector2 mousePosition;
     Ray ray;
     bool hitDetected = false;
     void Update()
@@ -18,10 +18,10 @@ public class Raycast : MonoBehaviour
 
     void HandleRaycast()
     {
-        mousePosition = Input.mousePosition;
+        //mousePosition = Input.mousePosition;
 
         RaycastHit raycastHit;
-        ray = mainCamera.ScreenPointToRay(mousePosition);
+        ray = mainCamera.ViewportPointToRay(new Vector3(0.5f, 0f, 0.1f)); 
         if (hitDetected = Physics.Raycast(ray, out raycastHit, maxDistance: 50f, raycastLayerMask))
         {
             if (Input.GetMouseButtonDown(0))
@@ -35,7 +35,7 @@ public class Raycast : MonoBehaviour
         if (Application.isPlaying)
         {
             Gizmos.color = Color.red;
-            ray = mainCamera.ScreenPointToRay(mousePosition);
+            //ray = mainCamera.ScreenPointToRay(mousePosition);
             Gizmos.DrawRay(ray.origin, ray.direction * 50f);
 
             Gizmos.DrawSphere(transform.position, 1f);

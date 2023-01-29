@@ -56,12 +56,13 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\PlayerController.cs" />
-    <Compile Include="Assets\Scripts\Turrent_Script.cs" />
     <Compile Include="Assets\Scripts\Serilize_Transform.cs" />
+    <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\Turrent_Script.cs" />
     <Compile Include="Assets\Scripts\PresictenceManager.cs" />
     <Compile Include="Assets\Scripts\Raycast.cs" />
+    <Compile Include="Assets\Gate_Script.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
